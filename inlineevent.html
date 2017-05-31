@@ -1,0 +1,74 @@
+<html>
+<head>
+  <style>
+  #myCanvas {
+  height:300px;
+  width:300px;
+  border: solid 1px #000000;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <!--<input @keyup.enter="alert('hello jey')" type="text" value="press the key"/>-->
+  <div id="myCanvas" v-on:onmouseup.right="onRightClick" v-on:click.left="onLeftClick" v-on:click.middle="onMiddleClick" v-on:contextmenu.prevent="onRightClick">
+  </div>
+  <br />
+  <textarea v-model="log" rows="6"></textarea  @contextmenu="logme('contextmenu')"></textarea>>
+  <input type="text" v-model.lazy="message"/>
+  <button  id="Button" v-on:click.prevent="button_click('10')" v-model="message">click</button>
+  <button v-on:click="revent('Form cannot be submitted yet.', $event)">
+ click me</button>
+ 
+</button>
+</div>
+<script>
+  var vm = new Vue({
+  el: '#app',
+  data: {
+    log:'' ,
+  message: 'Tutorialsplane',
+  //},
+  created: function() {
+    this.log = 'App Started\n';
+  },
+  methods: {
+    button_click: function(msg) {
+      alert('The Number is::' + msg + '!')
+      if (event) {
+        alert(event.target.tagName)
+        console.log(event.target)
+      }
+    },
+   prevent: function (message, event) {
+    event.preventDefault()
+    console.log(event.target)
+    alert(message)
+ },created: function() {
+    this.log = 'App Started\n';
+  },
+
+    onLeftClick: function(event) {
+      this.log += 'Left Button Clicked\n';
+    },
+
+    onMiddleClick: function(e) {
+      this.log += 'Middle Button Clicked\n';
+    },
+
+    onRightClick: function(e) {
+      this.log += 'Right Button Clicked\n';  
+      console.log('right button clicked')  
+    },
+    logme (msg) {
+			this.input += msg +'\n'
+      alert(msg)
+      console.log(msg)
+    }
+  }
+  }
+})
+</script>
+</body>
+</html>

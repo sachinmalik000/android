@@ -1,0 +1,98 @@
+<div class="clearfix">
+<a href="https://www.tutorialsplane.com/wp-content/uploads/2017/05/add-1.png"><img src="https://www.tutorialsplane.com/wp-content/uploads/2017/05/add-1.png" alt="" width="542" height="161" class="alignnone size-full wp-image-13891" /></a>
+</div>
+<h3>Key Modifiers | Example</h3>
+<p>These modifiers are most useful in various situations depending on you program fuctionality. They are most useful in various situation when once you will make your own app which takes control over the keyboard action based events.</p>
+<p>All key modifiers are listed as in below table:</p>
+<style>
+#menu{
+line-height: 150%;
+}
+</style>
+<div id="menu">
+<ol>
+<li style='color: red;'><span style='color:black;'>.up</span></li>
+<li style='color: red;'><span style='color:black;'>.enter</span></li>
+<li style='color: red;'><span style='color:black;'>.down</span></li>
+<li style='color: red;'><span style='color:black;'>.left</span></li>
+<li style='color: red;'><span style='color:black;'>.right</span></li>
+<li style='color: red;'><span style='color:black;'>.space</span></li>
+<li style='color: red;'><span style='color:black;'>.delete</span></li>
+<li style='color: red;'><span style='color:black;'>.tab</span></li>
+<li style='color: red;'><span style='color:black;'>.esc</span></li>
+</ol>
+</div>
+<div class="clearfix">
+<h4 class="exampleHeading">Example</h4>
+<table id="goverView" class="exampleCode">
+<tbody>
+<tr>
+<td>
+<pre>
+</pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="clearfix">
+
+</div>
+<h2>Mouse Button Modifiers | Example</h2>
+<p>These events are eventually take place when a user clicks a mouse button. So depending upon user's action there are three types of mouse enabled events which can be bind in Vue.Js.
+All three button modifiers are listed as in below table:</p>
+<style>
+#menu{
+line-height: 150%;
+}
+</style>
+<div id="menu">
+<ol>
+<li style='color: red;'><span style='color:black;'>.left</span></li>
+<li style='color: red;'><span style='color:black;'>.right</span></li>
+<li style='color: red;'><span style='color:black;'>.middle</span></li>
+</ol>
+</div>
+<div class="exampleDiv">
+<h4 class="exampleHeading">Example</h4>
+<table id="goverView" class="exampleCode">
+<tbody>
+<tr>
+<td>
+<pre>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"></script>
+</head>
+<body>
+<div id="app">
+ <button v-on:click.shift="ButtonListener">Click Here</button>
+</div>
+<script>
+  var vm = new Vue({
+  el: '#app',
+  data: {
+  counter:0,
+  message: 'Tutorialsplane'
+  },
+  methods: {
+    Listener: function() {
+			alert("You clicked the button!");
+		},
+		ButtonListener: function() {
+			alert("You pressed the Shift + Enter key!");
+		},
+         }
+})
+</script>
+</body>
+</html>
+</pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="clearfix">
+<a href="https://www.tutorialsplane.com/wp-content/uploads/2017/05/mouse-modifier.png"><img src="https://www.tutorialsplane.com/wp-content/uploads/2017/05/mouse-modifier.png" alt="" width="909" height="144" class="alignnone size-full wp-image-13874" /></a>
+</div>
